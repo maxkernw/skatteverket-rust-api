@@ -13,7 +13,6 @@ pub struct TestPerson {
 }
 
 pub async fn fetch_data_from_api(year: String, amount: String) -> Result<ApiResponse> {
-    // Construct the API URL
     let url = format!(
         "https://skatteverket.entryscape.net/rowstore/dataset/b4de7df7-63c0-4e7e-bb59-1f156a591763?testpersonnummer={}.*&_limit={}&_offset=0",
         year, amount

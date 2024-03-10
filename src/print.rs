@@ -4,8 +4,6 @@ use std::borrow::Cow;
 
 use crate::skatteverket::TestPerson;
 
-// Function to create a colored cell with the specified text and color
-// Function to create a colored cell with the specified text and color
 pub fn colored_cell<S: Into<Cow<'static, str>>>(text: S, color: Color) -> Cell {
     let text = text.into();
     Cell::new(&format!("{}", text.color(color)))

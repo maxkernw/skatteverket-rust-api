@@ -6,7 +6,6 @@ use skatteverket::fetch_data_from_api;
 
 use crate::print::print_table;
 
-// https://skatteverket.entryscape.net/rowstore/dataset/b4de7df7-63c0-4e7e-bb59-1f156a591763?testpersonnummer=1990.*&_limit=100&_offset=0
 #[tokio::main]
 async fn main() {
     print_logo();
@@ -31,7 +30,6 @@ async fn main() {
             match amount {
                 Ok(amount) => {
                     println!("Amount... {:?}", amount);
-                    // Call the service function
                     let result = fetch_data_from_api(year, amount).await;
 
                     match result {
